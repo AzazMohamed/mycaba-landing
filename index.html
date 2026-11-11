@@ -280,7 +280,7 @@ const WILAYAS = [
 ];
 /* ================================ */
 const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
-const fmt = n => n.toLocaleString("fr-DZ").replace(/ | /g, " ");
+const fmt = n => String(n);
 let offer = CONFIG.offers.find(o => o.best) || CONFIG.offers[0];
 $$("[data-price1]").forEach(e => e.textContent = fmt(CONFIG.offers[0].price));
 
